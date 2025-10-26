@@ -1,0 +1,181 @@
+Metadata-Version: 2.4
+Name: sensai
+Version: 0.1.0
+Summary: Your own sensei, using AI
+Author-email: sensAI Team <team@sensai.dev>
+License: MIT
+Project-URL: Homepage, https://github.com/Basmoussent/sensai
+Project-URL: Documentation, https://github.com/Basmoussent/sensai#readme
+Project-URL: Repository, https://github.com/Basmoussent/sensai.git
+Project-URL: Issues, https://github.com/Basmoussent/sensai/issues
+Keywords: ai,education,coding,sensei,vllm,mistral
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.104.1
+Requires-Dist: uvicorn[standard]>=0.24.0
+Requires-Dist: vllm>=0.2.7
+Requires-Dist: pydantic>=2.5.0
+Requires-Dist: python-multipart>=0.0.6
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+
+# sensAI
+
+Your own sensei, using AI.
+
+## What is sensAI?
+
+sensAI is an AI-powered coding sensei that helps students learn programming through guided code review and Socratic questioning. Instead of just fixing code, sensAI teaches students to think critically about their code and discover solutions themselves.
+
+## Features
+
+- **Code Review**: Paste your code and get educational feedback
+- **Socratic Teaching**: Learn through guided questions rather than direct answers
+- **Multiple Languages**: Support for Python, JavaScript, TypeScript, Java, C++, and more
+- **Dark Theme**: Beautiful, modern interface
+- **Real-time Streaming**: Get responses as the AI thinks
+
+## Quick Start
+
+### Prerequisites
+
+- Docker and Docker Compose
+- At least 8GB RAM (for the AI model)
+- NVIDIA GPU recommended (for faster inference)
+
+### Running sensAI
+
+1. **Clone and start**:
+   ```bash
+   git clone <repository-url>
+   cd sensAI
+   make
+   ```
+
+2. **Access the application**:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8000
+   - Health check: http://localhost:8000/health
+
+### Available Commands
+
+```bash
+make          # Start all services
+make restart  # Restart all services  
+make stop     # Stop all services
+make logs     # Show service logs
+make clean    # Clean up everything
+```
+
+## How to Use
+
+1. **Open the web interface** at http://localhost:3000
+2. **Select your programming language** from the dropdown
+3. **Paste your code** in the text area
+4. **Optionally ask a specific question** about your code
+5. **Click "Get Sensei Review"** and watch the AI analyze your code
+6. **Learn through the AI's questions and explanations**
+
+## Example
+
+**Your Code:**
+```python
+def calculate_average(numbers):
+    total = 0
+    for num in numbers:
+        total = total + num
+    return total / len(numbers)
+```
+
+**Sensei's Response:**
+> Great start! I can see you're thinking about how to calculate an average. Let me ask you a few questions to help you think deeper:
+> 
+> 1. What happens if someone passes an empty list to your function?
+> 2. What if they pass something that's not a list of numbers?
+> 
+> These are important considerations for writing robust code. How might you handle these cases?
+
+## Architecture
+
+- **Backend**: FastAPI + vLLM + Mistral-7B-Instruct
+- **Frontend**: React + TypeScript with dark theme
+- **AI Model**: Mistral-7B-Instruct-v0.3 (optimized for coding tasks)
+- **Deployment**: Docker Compose for easy setup
+
+## Development
+
+### Backend Development
+
+```bash
+# Setup development environment
+make setup-dev
+
+# Run in development mode
+make dev
+
+# Or manually:
+source venv/bin/activate
+pip install -e .
+cd backend && python main.py
+```
+
+### Frontend Development
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+## Model Information
+
+sensAI uses **Mistral-7B-Instruct-v0.3**, a powerful language model fine-tuned for instruction following. The model is optimized for:
+
+- Code understanding and analysis
+- Educational explanations
+- Socratic questioning techniques
+- Multiple programming languages
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Out of Memory**: Ensure you have at least 8GB RAM available
+2. **Slow Responses**: Consider using a GPU for faster inference
+3. **Model Download**: First run may take time to download the model (~13GB)
+
+### Health Check
+
+Visit http://localhost:8000/health to verify the backend is running properly.
+
+## Contributing
+
+This is an MVP (Minimum Viable Product). Future enhancements planned:
+
+- User authentication and progress tracking
+- Multiple conversation sessions
+- CLI tool for local development
+- Support for larger models (Codestral-22B)
+- Advanced code analysis features
+
+## License
+
+[Add your license here]
+
+---
+
+**Built with ❤️ for students learning to code**

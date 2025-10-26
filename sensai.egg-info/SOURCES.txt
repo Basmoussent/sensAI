@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+backend/main.py
+backend/prompts.py
+sensai.egg-info/PKG-INFO
+sensai.egg-info/SOURCES.txt
+sensai.egg-info/dependency_links.txt
+sensai.egg-info/entry_points.txt
+sensai.egg-info/requires.txt
+sensai.egg-info/top_level.txt

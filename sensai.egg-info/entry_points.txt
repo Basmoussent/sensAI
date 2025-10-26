@@ -1,0 +1,2 @@
+[console_scripts]
+sensai = backend.main:main
