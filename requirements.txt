@@ -1,0 +1,11 @@
+streamlit
+htbuilder
+fastapi
+vllm
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+langchain-community
+langchain-core
+langchain-text-splitters
