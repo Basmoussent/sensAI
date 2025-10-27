@@ -2,6 +2,13 @@
 
 Your own sensei, using AI.
 
+## 📋 Project Management
+
+- **📖 Documentation:** [docs/](docs/) - Complete project documentation
+- **🎯 Project Board:** [View on GitHub](https://github.com/users/yepun01/projects/1) - Track progress and issues
+- **📋 Issues:** [View Issues](https://github.com/Basmoussent/sensAI/issues) - 14 tasks organized by sprint
+- **🚀 Quick Start:** [docs/SETUP_SUMMARY.md](docs/SETUP_SUMMARY.md) - Get started in 5 minutes
+
 ## What is sensAI?
 
 sensAI is a **self-hostable AI-powered coding sensei** that helps students learn programming through guided code review and Socratic questioning. Instead of just fixing code, sensAI teaches students to think critically about their code and discover solutions themselves.
