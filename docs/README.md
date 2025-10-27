@@ -27,6 +27,7 @@ Complete documentation for the sensAI project.
 
 ### Technical Documentation
 - **[CLAUDE.md](CLAUDE.md)** - Technical architecture and development guide
+- **[GIT_WORKFLOW.md](GIT_WORKFLOW.md)** - Git workflow and best practices for developers
 - **[INSTALL_GH_CLI.md](INSTALL_GH_CLI.md)** - GitHub CLI installation instructions
 
 ---
